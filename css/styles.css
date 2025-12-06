@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Dış boşlukları (margin) sıfırlar. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+/* ul etiketi için özel olarak iç boşluğu (padding) sıfırlama */
+ul {
+  padding: 0;
+  /* Listelerin önündeki varsayılan işaretçileri kaldırır. */
+  list-style-type: none;
+}
+.container {
+  max-width: 1440pxpx; /* Genişlik 1440px olmalıdır. */
+  padding: 0 15px; /* Kenarlardan içerik taşmasını engellemek için küçük bir padding */
+  margin: 0 auto; /* İçeriği ortalama */
+}
+/* Başlığın alt kenarlığı olmalıdır */
+.page-header {
+  border-bottom: 1px solid black; /* Görünür olması için rengi ayarlayın */
+}
+
+/* Tüm bölümlerin üst ve alt dolgusu (padding) 120 piksel olmalıdır */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.page-header .container .contact-link {
+  display: flex;
+}
+.page-footer .container .footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: #434455;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.page-header .container .header-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+.web {
+  color: #4d5ae5;
+}
+.studio {
+  color: #2e2f42;
+}
+.nav-link {
+  color: #2e2f42;
+}
+address a {
+  color: #2e2f42;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  color: #ffffff;
+}
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.25;
+}
+h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+p {
+  font-weight: 400;
+  line-height: 1.5;
+}
+.hero-section {
+  background-color: #2e2f42;
+  text-align: center;
+}
+.our-team {
+  background-color: #f4f4fd;
+  text-align: center;
+}
+.team-item {
+  /* Kural 1: Kartın arka planını beyaz yapın */
+  background-color: #ffffff;
+
+  /* Kural 2: Kartın kenarlarını hafifçe yumuşatın (opsiyonel) */
+  border-radius: 4px;
+
+  /* Kural 3: Kartın altına hafif bir gölge verin (Çerçeve hissi verir) */
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+
+  box-shadow: 0px 1px 1px 0px rgba(46, 47, 66, 0.16);
+
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.our-portfolio {
+  text-align: center;
+}
+.features-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.our button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #4d5ae5;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.contact-link:hover {
+  color: #404bbf;
+}
+.nav-link:hover {
+  color: #404bbf;
+}
+.studio-link:active {
+  text-decoration: underline;
+}
+.button:hover {
+  background-color: #404bbf;
+}
+.page-footer {
+  background-color: #2e2f42;
+}
+.footer p {
+  color: #f4f4fd;
+}
+.section .our-portfolio {
+  display: flex;
+}
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.our-team-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
