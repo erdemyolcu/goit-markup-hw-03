@@ -2,7 +2,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Kutunun boyutunu (genişlik/yükseklik) ayarlarken padding ve border'ı dahil et. Bu, düzenin bozulmasını engeller. */
 }
 
 h1,
@@ -12,48 +12,48 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin: 0; /* Tüm başlık ve paragraf etiketlerinin varsayılan dış boşluklarını (margin) sıfırlarız. */
 }
 
 ul {
   margin: 0; /* HTML'deki ul'nin dış marginini sıfırlar */
-  padding: 0;
-  list-style-type: none;
+  padding: 0; /* ul etiketlerinin varsayılan iç boşluğunu (padding) sıfırlar. */
+  list-style-type: none; /* Listelerin başındaki varsayılan işaretçileri (nokta/sayı) kaldırır. */
 }
 a {
-  text-decoration: none;
+  text-decoration: none; /* Linklerin altındaki varsayılan çizgiyi (underline) kaldırır. */
   /* Mentorun kabul edeceği temiz geçiş kuralı */
-  transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out; /* Renk değişiminin 250 milisaniyede yumuşak geçiş yapmasını sağlar (Hover efekti için). */
 }
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  display: block; /* Resmi bir blok eleman yapar (altındaki boşlukları yok eder). */
+  max-width: 100%; /* Resmin konteynerinden büyük olmasını engeller. */
+  height: auto; /* Resmin en boy oranını korur. */
 }
 
 /* --- Temel Tipografi ve Renkler --- */
 body {
-  font-family: "Roboto", sans-serif;
-  color: #434455;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: "Roboto", sans-serif; /* Projenin ana yazı tipini belirler. */
+  color: #434455; /* Sayfadaki ana metin rengi (Gri-Koyu Gri). */
+  font-size: 16px; /* Varsayılan metin boyutunu belirler. */
+  line-height: 1.5; /* Metin satırları arasındaki boşluğu (yüksekliği) ayarlar. */
 }
 
 /* Tipografi Kuralları */
 h1 {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  color: #ffffff;
+  font-weight: 700; /* Kalınlık ayarı */
+  font-size: 56px; /* Büyük yazı tipi boyutu */
+  line-height: 1.07; /* Başlıklar için daha dar satır aralığı */
+  color: #ffffff; /* Ana başlık (Hero) rengi. */
 }
 h2 {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11; /* Figma'ya göre 1.25 yerine daha sıkı ayar */
-  letter-spacing: 0.02em;
+  line-height: 1.11; /* Section başlığı için satır aralığı */
+  letter-spacing: 0.02em; /* Harfler arası boşluk */
 }
 h3 {
-  font-weight: 500; /* Figma'da 500 */
+  font-weight: 500; /* Orta kalınlık */
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -61,21 +61,21 @@ h3 {
 
 /* --- Konteyner ve Section Kuralları --- */
 .container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
+  max-width: 1158px; /* İçeriğin maksimum genişliğini 1158 pikselde sınırlar (Figma'daki genişlik). */
+  padding: 0 15px; /* Konteynerin kenarlarından 15 piksel iç boşluk bırakır (İçeriğin kenara yapışmasını önler). */
+  margin: 0 auto; /* Konteyneri sayfada yatay olarak ortalar. */
 }
 
 .section {
   padding-top: 120px;
-  padding-bottom: 120px; /* Tüm bölümlerin 120px padding'i */
+  padding-bottom: 120px; /* Tüm ana bölümlerin üst ve alt boşluğunu 120 piksel yapar. */
 }
 .section-title {
-  text-align: center;
-  margin-bottom: 72px; /* Başlık ile içerik arası boşluk */
+  text-align: center; /* Başlığı ortalar. */
+  margin-bottom: 72px; /* Başlık ile altındaki içerik arasındaki boşluğu 72 piksel yapar. */
 }
 .visually-hidden {
-  position: absolute; /* Erişilebilirlik için gizlenen başlıklar */
+  position: absolute; /* Normal akıştan çıkarır. */
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -84,19 +84,19 @@ h3 {
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  overflow: hidden; /* Ekran okuyucular için kalır, görsel olarak gizlenir (Erişilebilirlik kuralı). */
 }
 
 /* --- HEADER (Üst Bilgi) --- */
 .page-header {
-  border-bottom: 1px solid #e7e7e7; /* Figma rengi */
+  border-bottom: 1px solid #e7e7e7; /* Başlığın altına ince bir çizgi çeker. */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /* Birleştirilmiş gölge */
-  padding: 24px 0; /* Üst ve alttan boşluk */
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /* Başlığın altına hafif bir gölge ekler. */
+  padding: 24px 0; /* Üstten ve alttan 24 piksel boşluk verir. */
 }
 .header-container {
-  display: flex;
-  align-items: center;
+  display: flex; /* İçindeki elemanları (Logo, Navigasyon, Adres) yatay olarak dizer (Flexbox). */
+  align-items: center; /* Elemanları dikeyde (ortadan) hizalar. */
 }
 
 .header-logo {
@@ -106,38 +106,38 @@ h3 {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #2e2f42;
-  margin-right: 76px;
+  margin-right: 76px; /* Logo ile navigasyon menüsü arasındaki boşluk. */
 }
 .web {
-  color: #4d5ae5;
+  color: #4d5ae5; /* WEB yazısını mavi yapar. */
 }
 .studio {
-  color: #2e2f42;
+  color: #2e2f42; /* STUDIO yazısını koyu gri yapar. */
 }
 
 /* Navigasyon */
 .nav-list {
-  display: flex;
-  gap: 40px;
+  display: flex; /* Navigasyon linklerini yatay dizer. */
+  gap: 40px; /* Linkler arasında 40 piksel boşluk bırakır. */
 }
 .nav-link {
   color: #2e2f42;
 }
 .nav-link:hover,
 .contact-link:hover {
-  color: #404bbf;
+  color: #404bbf; /* Fare linkin üzerine geldiğinde (hover) rengi koyu maviye çevirir. */
 }
 .studio-link:active {
-  text-decoration: underline; /* Önceki koddan korundu */
+  text-decoration: underline; /* Link tıklandığında altı çizili yapar. */
 }
 
 /* Adres ve İletişim */
 .contact-info {
-  font-style: normal; /* İtalik yazıyı düzeltir */
-  margin-left: auto; /* Adres kısmını en sağa iter (EN TEMİZ YÖNTEM) */
+  font-style: normal; /* <address> etiketinin varsayılan italik stilini kaldırır. */
+  margin-left: auto; /* Bu elemanı mümkün olduğunca sağa iter (Flexbox'ta en sağa hizalama). */
 }
 .contact-list {
-  display: flex;
+  display: flex; /* İletişim linklerini (email/tel) yan yana dizer. */
   gap: 40px;
 }
 .contact-link {
@@ -147,64 +147,65 @@ h3 {
 
 /* --- HERO (Ana Başlık) --- */
 .hero-section {
-  background-color: #2e2f42;
-  text-align: center;
-  padding: 188px 0; /* Dikeyde ortalama */
+  background-color: #2e2f42; /* Arka planı koyu yapar. */
+  text-align: center; /* İçindeki metinleri ve butonu ortalar. */
+  padding: 120px 0; /* Dikeyde büyük bir boşluk vererek içeriği dikeyde ortalar. */
 }
 .button {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #4d5ae5;
-  color: #ffffff;
+  background-color: #4d5ae5; /* Mavi arka plan rengi */
+  color: #ffffff; /* Beyaz yazı rengi */
   letter-spacing: 0.04em;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  padding: 16px 32px; /* Buton büyüklüğünü ayarlar */
+  cursor: pointer; /* Fare imlecini el şekline getirir. */
+  border: none; /* Kenarlığı kaldırır. */
+  border-radius: 4px; /* Köşeleri yuvarlar. */
+  padding: 16px 32px; /* Butonun iç boşluğu (büyüklüğü). */
 }
 .button:hover {
-  background-color: #404bbf;
+  background-color: #404bbf; /* Fare üzerine gelince rengi koyu mavi yapar. */
 }
 
 /* --- FEATURES (Özellikler) --- */
 .features-list {
-  display: flex;
-  gap: 24px;
+  display: flex; /* Kartları yan yana dizer. */
+  gap: 24px; /* Kartlar arasında 24 piksel boşluk bırakır. */
 }
 .features-list li {
-  flex-basis: calc((100% - 72px) / 4); /* 4 sütunlu düzen */
+  /* 4 sütunlu bir düzen oluşturur: (Toplam genişlik - boşluklar) / 4 */
+  flex-basis: calc((100% - 72px) / 4);
 }
 .features-list h3 {
-  margin-bottom: 8px; /* Başlık ile paragraf arası boşluk */
+  margin-bottom: 8px; /* Başlık ile paragraf arası 8 piksel boşluk. */
 }
 
 /* --- OUR TEAM (Ekibimiz) --- */
 .team-section {
   /* Önceki kodda .our-team idi, figma için .team-section olarak düzeltildi */
-  background-color: #f4f4fd;
+  background-color: #f4f4fd; /* Açık gri arka plan rengi verir. */
 }
 .team-list {
   /* Önceki kodda .our-team-list idi, figma için .team-list olarak düzeltildi */
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Takım kartlarını yatayda ortalar. */
   gap: 24px;
 }
 .team-item {
-  background-color: #ffffff;
-  border-radius: 4px;
+  background-color: #ffffff; /* Kartların arka planını beyaz yapar. */
+  border-radius: 4px; /* Köşeleri yuvarlar. */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  flex-basis: calc((100% - 72px) / 4);
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /* Kartın altına hafif bir gölge ekler. */
+  flex-basis: calc((100% - 72px) / 4); /* 4 sütunlu düzen. */
 }
 .team-card-content {
   /* HTML'e eklenen sarmalayıcının stili */
-  padding: 32px 0; /* Dikeyde 32px boşluk */
-  text-align: center;
+  padding: 32px 0; /* İçerik için üstten ve alttan 32 piksel boşluk verir. */
+  text-align: center; /* İçindeki metni ortalar. */
 }
 .team-card-content h3 {
-  margin-bottom: 8px; /* İsim ile Ünvan arası boşluk */
+  margin-bottom: 8px; /* İsim ile Ünvan arası 8 piksel boşluk. */
 }
 
 /* --- OUR PORTFOLIO (Portföyümüz) --- */
@@ -214,32 +215,35 @@ h3 {
 }
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px; /* Yatay boşluk */
-  row-gap: 48px; /* Dikey boşluk */
+  flex-wrap: wrap; /* Kartlar sığmazsa alt satıra geçmesini sağlar. */
+  column-gap: 24px; /* Yatayda 24 piksel boşluk. */
+  row-gap: 48px; /* Alt satırdaki kartlar arasında 48 piksel dikey boşluk. */
 }
 .portfolio-list li {
-  flex-basis: calc((100% - 48px) / 3); /* 3 sütunlu düzen */
+  flex-basis: calc((100% - 48px) / 3); /* 3 sütunlu düzen. */
 }
 .portfolio-card-content {
-  /* HTML'e eklenen sarmalayıcının stili */
-  padding: 32px 16px; /* İç boşluk */
-  border: 1px solid #e7e7e7;
-  border-top: none; /* Görselden ayırmak için üst kenarlığı kaldır */
-  text-align: left; /* Metni sola hizala */
+  /* HTML'e eklenen metin sarmalayıcısı. */
+  padding: 32px 16px; /* İç boşluk (üst/alt 32, sol/sağ 16). */
+  border-bottom: 1px solid #e7e7e7; /* Sadece alt kenarlığı ekler. */
+  /* Kenarlığın yanlarda da görünmesini sağlamak için sağ/sol kenarlık ekleme */
+  border-left: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  border-top: none; /* Üstteki kenarlığı kaldırır, böylece resme yapışır. */
+  text-align: left; /* Metni sola hizalar. */
 }
 .portfolio-card-content h3 {
-  margin-bottom: 8px; /* Başlık ile Uygulama Türü arası boşluk */
+  margin-bottom: 8px; /* Başlık ile Uygulama Türü arası 8 piksel boşluk. */
 }
 
 /* --- FOOTER (Alt Bilgi) --- */
 .page-footer {
-  background-color: #2e2f42;
-  padding: 100px 0;
+  background-color: #2e2f42; /* Koyu arka plan. */
+  padding: 100px 0; /* Üstten ve alttan 100 piksel boşluk. */
 }
 .footer-container {
-  display: flex;
-  align-items: baseline;
+  display: flex; /* İçerikleri yatay dizer. */
+  align-items: baseline; /* İçerikleri taban çizgisine göre hizalar. */
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -247,16 +251,16 @@ h3 {
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  color: #2e2f42; /* Footer logo için yeniden tanımlandı */
+  color: #2e2f42; /* Footer logo için yeniden tanımlandı (Web kısmı için kullanılır). */
 }
 .studio-light {
-  color: #f4f4fd; /* Footer'daki STUDIO rengi */
+  color: #f4f4fd; /* Footer'daki STUDIO yazısının rengi (Açık Gri). */
 }
 .footer-logo-text {
-  margin-right: 120px; /* Logo/metin bloğu ile sosyal medya arası boşluk */
+  margin-right: 120px; /* Logo/metin bloğu ile diğer (sosyal medya) alan arasındaki boşluk. */
 }
 .footer-text {
   color: #f4f4fd;
-  width: 264px;
-  margin-top: 16px; /* Logo ile paragraf arası dikey boşluk */
+  width: 264px; /* Metin bloğunun genişliğini sınırlandırır. */
+  margin-top: 16px; /* Logo ile paragraf arası 16 piksel boşluk. */
 }
