@@ -22,7 +22,7 @@ ul {
 }
 a {
   text-decoration: none; /* Linklerin altındaki varsayılan çizgiyi (underline) kaldırır. */
-  /* Mentorun kabul edeceği temiz geçiş kuralı */
+
   transition: color 250ms ease-in-out; /* Renk değişiminin 250 milisaniyede yumuşak geçiş yapmasını sağlar (Hover efekti için). */
 }
 img {
