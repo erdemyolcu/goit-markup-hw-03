@@ -149,7 +149,10 @@ h3 {
 .hero-section {
   background-color: #2e2f42; /* Arka planı koyu yapar. */
   text-align: center; /* İçindeki metinleri ve butonu ortalar. */
-  padding: 120px 0; /* Dikeyde büyük bir boşluk vererek içeriği dikeyde ortalar. */
+  padding: 188px 0; /* Dikeyde büyük bir boşluk vererek içeriği dikeyde ortalar. */
+}
+h1 {
+  margin-bottom: 48px; /* Örneğin 32px veya 40px */
 }
 .button {
   font-family: "Roboto", sans-serif;
